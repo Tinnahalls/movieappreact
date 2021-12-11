@@ -3,12 +3,13 @@ import React, { useState, useEffect } from 'react'
 import Header from './componenent/UI/Header'
 import CharacterGrid from './componenent/characters/CharacterGrid'
 import Search from './componenent/UI/Search'
+import axios from 'axios';
 
 function App() {
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
   const [query, setQuery] = useState('')
-  const axios = require('axios');
+
   
   useEffect(() => {
     const fetchItems = async () => {
